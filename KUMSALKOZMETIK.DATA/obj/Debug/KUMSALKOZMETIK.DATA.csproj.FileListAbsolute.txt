@@ -1,0 +1,11 @@
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\KUMSALKOZMETIK.DATA.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\KUMSALKOZMETIK.DATA.pdb
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\Castle.Core.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\FluentNHibernate.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\Iesi.Collections.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\log4net.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\bin\Debug\NHibernate.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\obj\Debug\KUMSALKOZMETIK.DATA.dll
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\obj\Debug\KUMSALKOZMETIK.DATA.pdb
+C:\Users\ozana\OneDrive\Masaüstü\KUMSALKOZMETIK\KUMSALKOZMETIK.DATA\obj\Debug\KUMSALKOZMETIK.DATA.csprojResolveAssemblyReference.cache

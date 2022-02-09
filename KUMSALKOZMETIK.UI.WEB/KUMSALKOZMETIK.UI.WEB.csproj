@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60505B6B-D98F-4BFE-85B2-410775BB05CA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KUMSALKOZMETIK.UI.WEB</RootNamespace>
+    <AssemblyName>KUMSALKOZMETIK.UI.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\DLL\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\DLL\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\DLL\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\DLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\DLL\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\DLL\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AdminPanel.Master" />
+    <Content Include="main.Master" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="images\404\Thumbs.db" />
+    <Content Include="images\blog\Thumbs.db" />
+    <Content Include="images\cart\Thumbs.db" />
+    <Content Include="images\Gecici\Thumbs.db" />
+    <Content Include="images\home\Thumbs.db" />
+    <Content Include="images\product-details\Thumbs.db" />
+    <Content Include="images\shop\Thumbs.db" />
+    <Content Include="images\Urunler_min\Thumbs.db" />
+    <Content Include="sample_web_site\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="sample_web_site\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="sample_web_site\Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPaneli.aspx" />
+    <Content Include="AdminPanelKategoriler.aspx" />
+    <Content Include="AdminPanelMusteriler.aspx" />
+    <Content Include="AdminPanelSiparisler.aspx" />
+    <Content Include="AdminPanelUrunler.aspx" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\hummingbird-treeview.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\price-range.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\toastr.css" />
+    <Content Include="DB\kumsalkzmtkscript.sql" />
+    <Content Include="DB\query.sql" />
+    <Content Include="detay.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Hesabim.aspx" />
+    <Content Include="HesabimAdres.aspx" />
+    <Content Include="HesabimSifre.aspx" />
+    <Content Include="HesabimSiparis.aspx" />
+    <Content Include="hizlisepet.aspx" />
+    <Content Include="images\404\404.png" />
+    <Content Include="images\blog\blog-one.jpg" />
+    <Content Include="images\blog\blog-three.jpg" />
+    <Content Include="images\blog\blog-two.jpg" />
+    <Content Include="images\blog\man-four.jpg" />
+    <Content Include="images\blog\man-one.jpg" />
+    <Content Include="images\blog\man-three.jpg" />
+    <Content Include="images\blog\man-two.jpg" />
+    <Content Include="images\blog\socials.png" />
+    <Content Include="images\cart\one.png" />
+    <Content Include="images\cart\three.png" />
+    <Content Include="images\cart\two.png" />
+    <Content Include="images\Gecici\-wella-professionals-blondor-soft-blonde-cream.jpg" />
+    <Content Include="images\Gecici\08052015182605.jpeg" />
+    <Content Include="images\Gecici\1.png" />
+    <Content Include="images\Gecici\16LISET.jpg" />
+    <Content Include="images\Gecici\200MLGELSET.jpg" />
+    <Content Include="images\Gecici\23581854059792976154.jpg" />
+    <Content Include="images\Gecici\57373217263574863524.jpg" />
+    <Content Include="images\Gecici\6_3fd0e572.jpg" />
+    <Content Include="images\Gecici\8680097040015.jpg" />
+    <Content Include="images\Gecici\Alix_bitli_özlü_saç_boyası_130_ml.jpg" />
+    <Content Include="images\Gecici\Alix_saç_boyası_130_ml.jpg" />
+    <Content Include="images\Gecici\Alix_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Gecici\Alix_tüp_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Gecici\Ağda Bezi.jpg" />
+    <Content Include="images\Gecici\beybi-muayene-eld-pudrasz-small-100lu-0-zoom.jpg" />
+    <Content Include="images\Gecici\big_urun_852_576.jpg" />
+    <Content Include="images\Gecici\BYB-0002_Beybi-Lateks-Muayene-Eldiveni-100%27lu_Medium-500x554.JPG" />
+    <Content Include="images\Gecici\dovme.jpg" />
+    <Content Include="images\Gecici\dsc01664.jpg" />
+    <Content Include="images\Gecici\HC-00P_1.jpg" />
+    <Content Include="images\Gecici\igora_boya.png" />
+    <Content Include="images\Gecici\igora_oksidan.gif.jpg" />
+    <Content Include="images\Gecici\Lilafix_saç_boyası_60_ml.png" />
+    <Content Include="images\Gecici\LOREAL Infinie Platine Pro-Keratine Güçlendirici Besleyici Güçlü Toz Saç Açıcı 500gr.jpg" />
+    <Content Include="images\Gecici\LOREAL INOA Krem Oksidan 1000ml.jpg" />
+    <Content Include="images\Gecici\Loreal Majirel Saç Boyaları.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Absolut Repair Lipidium Aşırı Yıpranmış Saçlar İçin Onarıcı Maske 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Absolut Repair Lipidium Aşırı Yıpranmış Saçlar İçin Onarıcı Mini Maske 75ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Absolut Repair Lipidium Aşırı Yıpranmış Saçlar İçin Onarıcı Şampuan 750ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Absolut Repair Lipidium Maske 200ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Absolut Repair Lipidium Onarıcı Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Absolut Repair Lipidium Onarıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Aminexil Advanced Saç Dökülmesine Karşı Roll On Serum 42x6ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Aminexil Advanced Saç Dökülmesine Karşı Serum 10x6ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Aminexil Dökülme Önleyici Set.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Curl Contour Dalgalı Saçlar İçin Bukle Belirginleştirici Maske 200ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Curl Contour Dalgalı Saçlar İçin Bukle Belirginleştirici Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Delicate Color Boyalı Saçlar İçin Renk Koruyucu Sülfatsız Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Density Advanced Saç Dökülmesi Karşıtı Yoğunlaştırıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Instant Clear Pure Yağlı Saçlar İçin Kepek Önleyici Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Maske 200ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Maske 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Liss Unlimited Asi Saçlar İçin Düzleştirici Maske 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Liss Unlimited Asi Saçlar İçin Düzleştirici Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Liss Unlimited Asi Saçlar İçin Düzleştirici Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Maske 200ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Maske 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Power Kera-Recharge Yıpranmış Saçlar İçin Yoğun Bakım Serumu 30x10ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Power Repair Lipidium Yıpranmış Saçlar İçin Onarıcı Serum 30x10ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Powerdose Color Boyalı Saçlar İçin Renk Koruyucu Parlaklık Serumu 30x10ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Maske 200ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Maske 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Pure Resource Yağlı Saçlar İçin Arındırıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Sensi Balance Hassas Baş Derisi İçin Yatıştırıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Shine Blonde Sarı Saçlar İçin Turuncu Önleyici Parlaklık Şampuanı 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Silver Gri ve Beyaz Saçlar İçin Parlaklık Veren Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Silver Gri ve Beyaz Saçlar İçin Parlaklık Veren Şampuan 750ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Vitamino Color AOX Boyalı Saçlar İçin Renk Koruyucu Mini Jel Maske 75ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Jel Maske 200ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Jel Maske 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Şampuan 1500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Şampuan 750ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Vitamino Delicate Color Boyalı Saçlar İçin Renk Koruyucu Sülfatsız Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Volumetry Volumceutic İnce Telli Saçlar İçin Hacimlendirici Maske 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Volumetry İnce Telli Saçlar İçin Hacimlendirici Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\LOREAL Serie Expert Volumetry İnce Telli Saçlar İçin Hacimlendirici Şampuan 750ml.jpg" />
+    <Content Include="images\Gecici\Loreal İnoa Oksidan Krem 10 - 20 - 30 Vol. - İnoa Zenginleştirilmiş Oksidan 1000ml.jpg" />
+    <Content Include="images\Gecici\Loreal İnoa Oksidan Krem 10 - 20 - 30 Vol. - İnoa Zenginleştirilmiş Oksidan 1000ml2.jpg" />
+    <Content Include="images\Gecici\Loreal İnoa Saç Boyaları.jpg" />
+    <Content Include="images\Gecici\Loreal İnoa Supreme Saç Boyaları.jpg" />
+    <Content Include="images\Gecici\loreal-inoa-post-sampuan-1500ml-650x650.jpg" />
+    <Content Include="images\Gecici\loreal-inoa-post-sampuan-1500ml.jpg" />
+    <Content Include="images\Gecici\loreal-inoa-post-sampuan-1500_ml.jpg" />
+    <Content Include="images\Gecici\loreal-serie-expert-liss-unlimited-duzlestirici-maske-200ml-650x650.jpg" />
+    <Content Include="images\Gecici\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM.jpg" />
+    <Content Include="images\Gecici\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM_%253_%256_%259_%2512.jpg" />
+    <Content Include="images\Gecici\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM_%253_%256_%259_%2512_YÜZDE_ÜÇ_ALTI_DOKUZ_ONİKİ_BİN_ML_BİR_LİTRE.jpg" />
+    <Content Include="images\Gecici\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM_%253_%256_%259_%2512_YÜZDE_ÜÇ_ALTI_DOKUZ_ONİKİ_BİN_ML_BİR_LİTRE_1_LT.jpg" />
+    <Content Include="images\Gecici\LOREAL_INOA_Krem_Oksidan_Peroksit_1000ml_10_20_30_VOLUM.jpg" />
+    <Content Include="images\Gecici\LOREAL_INOA_Krem_Oksidan_Peroksit_1000_ml_10_20_30_VOLUM.jpg" />
+    <Content Include="images\Gecici\Loreal_inoa_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Gecici\Loreal_Majirel_Sac_Boyalari_60_ml.jpg" />
+    <Content Include="images\Gecici\loreal_professionnel_inoa_krem_oksidan_37305_1.jpg" />
+    <Content Include="images\Gecici\Martix_saç_boyası_60_ml.png" />
+    <Content Include="images\Gecici\Matrix Socolor Beauty Saç Boyası Doğal Renk Koleksiyonu.jpg" />
+    <Content Include="images\Gecici\Morfose Argan Fön Suyu 400 ml Turuncu.jpg" />
+    <Content Include="images\Gecici\Morfose Argan Krem Maske 170ml.jpg" />
+    <Content Include="images\Gecici\Morfose Argan Saf Yağ 15ml.jpg" />
+    <Content Include="images\Gecici\Morfose Argan Yağı 100ml.jpg" />
+    <Content Include="images\Gecici\Morfose Argan Şampuan 500ml.jpg" />
+    <Content Include="images\Gecici\Morfose Argan Şekillendirici Elixir 100ml.jpg" />
+    <Content Include="images\Gecici\Morfose Balyaj Boyası 250ml.png" />
+    <Content Include="images\Gecici\Morfose Biotin Fön Suyu 400 ml Yeşil.jpg" />
+    <Content Include="images\Gecici\Morfose Biryantin 175ml.png" />
+    <Content Include="images\Gecici\MORFOSE BODY SCRUB-500x500 %282%29.jpg" />
+    <Content Include="images\Gecici\MORFOSE BODY SCRUB-500x500 %283%29.jpg" />
+    <Content Include="images\Gecici\MORFOSE BODY SCRUB-500x500 %284%29.jpg" />
+    <Content Include="images\Gecici\MORFOSE BODY SCRUB-500x500 %285%29.jpg" />
+    <Content Include="images\Gecici\MORFOSE BODY SCRUB-500x500 %286%29.jpg" />
+    <Content Include="images\Gecici\Morfose Keratin Fön Suyu 400 ml Mor.jpg" />
+    <Content Include="images\Gecici\Morfose Keratin Maske 500 ml.jpg" />
+    <Content Include="images\Gecici\Morfose Keratin Serum 75ml Siyah.png" />
+    <Content Include="images\Gecici\Morfose Kremsi Saç Bakım Köpüğü 200 ml.png" />
+    <Content Include="images\Gecici\Morfose Kremsi Süt Şampuan 400 ml.png" />
+    <Content Include="images\Gecici\Morfose Macadamia Krem Maske 500 ml.jpg" />
+    <Content Include="images\Gecici\Morfose Milk Keratin Serum 125 ml.png" />
+    <Content Include="images\Gecici\Morfose Milk Therapy Chocolate 200 ml.jpg" />
+    <Content Include="images\Gecici\Morfose Natura Therapy Macadamia Bakım Yağı 125 ml.jpg" />
+    <Content Include="images\Gecici\Morfose Natura Therapy Macadamia Şampuan.jpg" />
+    <Content Include="images\Gecici\Morfose Natura Therapy Saf Macadamia Yağı.jpg" />
+    <Content Include="images\Gecici\Morfose Renkli Işıltılı Saç Spreyi Glitter Spray 125ml.png" />
+    <Content Include="images\Gecici\Morfose Saç bakım maskesi 500ml Ballı.png" />
+    <Content Include="images\Gecici\Morfose Saç bakım maskesi 500ml Boya Koruma.png" />
+    <Content Include="images\Gecici\Morfose Saç masaj toniği 250ml.png" />
+    <Content Include="images\Gecici\Morfose Saç Maskesi 250 ml.png" />
+    <Content Include="images\Gecici\Morfose Saç serumu 100ml.png" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi 350 ml Normal Strong Beyaz.png" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi 350ml Normal Strong Beyaz.png" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi 350_ml Normal Strong Beyaz.png" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi 400 ml Extra Strong Siyah.png" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi 400ml Mega Strong Mor.png" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi 400ml NOGAS Ultra Strong Turuncu.png" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi 400ml Ultra Strong Turuncu.jpg" />
+    <Content Include="images\Gecici\Morfose Saç Spreyi Normal Strong Beyaz.png" />
+    <Content Include="images\Gecici\Morfose Saç Waxı 120g Clay Mat.png" />
+    <Content Include="images\Gecici\Morfose Saç Waxı 120g Extra Strong Siyah.png" />
+    <Content Include="images\Gecici\Morfose Saç Waxı 120g Ultra Strong Turuncu.png" />
+    <Content Include="images\Gecici\Morfose Silk Serum 75 ml Beyaz.png" />
+    <Content Include="images\Gecici\Morfose Toz Açıcı 1000 g.png" />
+    <Content Include="images\Gecici\Morfose Çift Fazla Fön Sütü 400 ml.png" />
+    <Content Include="images\Gecici\Morfose Çift Fazla Fön Sütü 400ml.png" />
+    <Content Include="images\Gecici\Morfose-Hair-Serum.jpg" />
+    <Content Include="images\Gecici\Morfose-Keratin-Serum.jpg" />
+    <Content Include="images\Gecici\MorfoseSaç Spreyi 350ml Normal Strong Beyaz.png" />
+    <Content Include="images\Gecici\Onarıcı Saç serumu 75 ml Turuncu.png" />
+    <Content Include="images\Gecici\Onarıcı Saç serumu 75ml Turuncu.png" />
+    <Content Include="images\Gecici\Organik_bitkisal_saç_boyası_150_ml.jpg" />
+    <Content Include="images\Gecici\Percem-Sac-Kopugu-500-ml--43751.jpg" />
+    <Content Include="images\Gecici\percem-styling-sac-kopugu-super-kalici-bukleler-697-75-B.jpg" />
+    <Content Include="images\Gecici\PERÇEM EL KREMİ E VİTAMİNLİ 250 ml.jpg" />
+    <Content Include="images\Gecici\PERÇEM LİMON AROMALI 80 DERECE KOLONYA 5lt.jpg" />
+    <Content Include="images\Gecici\PERÇEM VAZELİN 110 ml.jpg" />
+    <Content Include="images\Gecici\Perçem_limon_kolonyası_bir_litre_1lt.jpg" />
+    <Content Include="images\Gecici\Perçem_limon_kolonyası_bir_litre_1_lt.jpg" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %282%29.png" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %283%29.png" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %284%29.png" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %285%29.png" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %282%29.png" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %283%29.png" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %284%29.png" />
+    <Content Include="images\Gecici\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %285%29.png" />
+    <Content Include="images\Gecici\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %282%29.png" />
+    <Content Include="images\Gecici\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %283%29.png" />
+    <Content Include="images\Gecici\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %284%29.png" />
+    <Content Include="images\Gecici\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %285%29.png" />
+    <Content Include="images\Gecici\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %286%29.png" />
+    <Content Include="images\Gecici\pr_01_1248_max.jpg" />
+    <Content Include="images\Gecici\pr_01_20_max.jpg" />
+    <Content Include="images\Gecici\pr_01_455_max.jpg" />
+    <Content Include="images\Gecici\pr_01_476_max.jpg" />
+    <Content Include="images\Gecici\Raliss.png" />
+    <Content Include="images\Gecici\Redist Keratin Argan Şampuan 500 Ml.jpg" />
+    <Content Include="images\Gecici\redist-2-fazlı-saç-kondisyoneri-argan-yağı-içerikli-400ml-redist-urunleri-redist-a--2732-320x300.jpg" />
+    <Content Include="images\Gecici\redist-hair-care-mousse-saç-köpuğu-40-çeşit-200gr-saç-bakım-urunleri-redist-alk114--2760-320x300.jpg" />
+    <Content Include="images\Gecici\redist-hair-care-oil-saç-bakım-yağı-150ml-saç-bakım-urunleri-redist-alk103--2761-320x300.jpg" />
+    <Content Include="images\Gecici\redist-hair-care-saç-bakım-kremi-500ml-şampuanlar-redist-alk108--2828-320x300.jpg" />
+    <Content Include="images\Gecici\redist-hair-care-shampoo-saç-bakım-şampuanı-40-çeşit-500ml-şampuanlar-redist-alk10--2827-320x300.jpg" />
+    <Content Include="images\Gecici\redist-hair-serum-saç-serumu-organik-argan-yağıkomple-bakım-100ml-saç-bakım-urunl-49-320x300.jpg" />
+    <Content Include="images\Gecici\redist-miracle-hair-care-oil-plus-keratin-yağı-100ml-saç-bakım-urunleri-redist-alk10--2842-320x300.jpg" />
+    <Content Include="images\Gecici\redist-saç-serumu-maximum-bakım-saç-bakım-urunleri-redist-alk105-1-2-48-320x300.jpg" />
+    <Content Include="images\Gecici\Saç bakım maskesi 500ml Onarıcı.png" />
+    <Content Include="images\Gecici\Schwarzkopf-profesyonel-igora-saç-boyası-renkleri1.jpg" />
+    <Content Include="images\Gecici\Schwarzkopf_profesyonel_absolutes_igora_saç_boyası_renkleri_60_ml.jpg" />
+    <Content Include="images\Gecici\Tek Kullanımlık 100%27lü Havlu.jpeg" />
+    <Content Include="images\Gecici\Tek Kullanımlık Terlik.jpg" />
+    <Content Include="images\Gecici\thumba___oje_5.jpg" />
+    <Content Include="images\Gecici\u7_3.jpg" />
+    <Content Include="images\Gecici\vitalboya-500x500.jpg" />
+    <Content Include="images\Gecici\Wella Clean Kepek Önleyici Şampuan 250ml.jpg" />
+    <Content Include="images\Gecici\Wella Enrich Moisturizing Şampuan  Kalın Telli Saçlar İçin Şampuan 1000 ml.jpg" />
+    <Content Include="images\Gecici\Wella Enrich Moisturizing Şampuan  İnce Telli Saçlar İçin Şampuan 1000 ml.jpg" />
+    <Content Include="images\Gecici\Wella Enrich İnce Telli Normal Saçlar İçin Hacimlendirici Şampuan 250ml.jpg" />
+    <Content Include="images\Gecici\Wella Enrich İnce TelliNormal Saçlar İçin Hacimlendirici Şampuan 250ml.jpg" />
+    <Content Include="images\Gecici\Wella Professionals Brillance Kalın Telli Boyalı Saçlar İçin Şampuan 1 lt.jpg" />
+    <Content Include="images\Gecici\Wella Professionals Brillance İnce Telli Boyalı Saçlar İçin Şampuan 1 lt.jpg" />
+    <Content Include="images\Gecici\Wella Professionals Enrich Conditioner 1 lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella Professionals Enrich Conditioner 1lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella Professionals Enrich Conditioner 1lt İnce Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella Professionals EnrichConditioner 1lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella Professionals EnrichConditioner 1lt Kalın Telli Saçlar İçinSaç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella Professionals EnrichConditioner 1lt İnce Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella ProfessionalsEnrich Conditioner 1 lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella ProfessionalsEnrich Conditioner 1 lt İnce Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Gecici\Wella Refresh Canlandirici Şampuan 250ml.jpg" />
+    <Content Include="images\Gecici\Wella Refresh Canlandirici Şampuan250ml.jpg" />
+    <Content Include="images\Gecici\wella-balance-dokulmeye-karsi-serum-8x6ml-3124-84-O.jpg" />
+    <Content Include="images\Gecici\wella-brillance-ince-telli-boyali-saclar-icin-bakim-kremi-200ml-922-84-O.jpg" />
+    <Content Include="images\Gecici\wella-brillance-ince-telli-boyali-saclar-icin-maske-500ml-924-85-O.jpg" />
+    <Content Include="images\Gecici\wella-brillance-ince-tellinormal-boyali-saclar-icin-maske-150ml-926-85-O.jpg" />
+    <Content Include="images\Gecici\wella-brillance-ince-tellinormal-boyali-saclar-icin-maske-150ml-926-85.jpg" />
+    <Content Include="images\Gecici\wella-brillance-ince-tellinormal-boyali-saclar-icin-sampuan-250ml-5421-85-B.jpg" />
+    <Content Include="images\Gecici\wella-brillance-kalin-telli-boyali-saclar-icin-bakim-kremi-200ml-922-84-O.jpg" />
+    <Content Include="images\Gecici\wella-brillance-kalin-telli-boyali-saclar-icin-maske-500ml-924-85-O.jpg" />
+    <Content Include="images\Gecici\wella-brillance-kalın-tellinormal-boyali-saclar-icin-maske-150ml-926-85 - Kopya.jpg" />
+    <Content Include="images\Gecici\wella-brillance-kalın-tellinormal-boyali-saclar-icin-sampuan-250ml-5421-85-B.jpg" />
+    <Content Include="images\Gecici\wella-calm-hassas-sac-derisi-icin-sampuan-250ml-5420-84-O.jpg" />
+    <Content Include="images\Gecici\wella-clean-kepek-onleyici-sampuan-250ml-1654-84-O.jpg" />
+    <Content Include="images\Gecici\wella-curl-it-mild-perma-losyonu-75ml-wella-perma-urunleri-4798-28-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-elixir-kirik-uc-bakim-onarim-yagi-40ml-932-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-ince-telli-normal-saclar-icin-hacimlendirici-sampuan-250ml.jpg" />
+    <Content Include="images\Gecici\wella-enrich-ince-telli-saclar-icin-nemlendirici-bakim-kremi-200ml-936-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-ince-telli-saclar-icin-nemlendirici-bakim-maskesi-150ml-931-85-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-ince-telli-saclar-icin-nemlendirici-bakim-maskesi-500ml-934-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-ince-telli-saclar-icin-nemlendirici-sampuan-250ml-933-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-ince-tellinormal-saclar-icin-hacimlendirici-sampuan-250ml-935-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-kalin-telli-saclar-icin-nemlendirici-bakim-kremi-200ml-936-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-kalin-telli-saclar-icin-nemlendirici-bakim-maskesi-150ml-931-85-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-kalin-telli-saclar-icin-nemlendirici-bakim-maskesi-500ml-934-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-kalin-telli-saclar-icin-nemlendirici-sampuan-250ml-933-86-O.jpg" />
+    <Content Include="images\Gecici\wella-enrich-kalın-telli-normal-saclar-icin-hacimlendirici-sampuan-250ml.jpg" />
+    <Content Include="images\Gecici\wella-oil-reflections-bakim-yagi-100ml-944-87-O.jpg" />
+    <Content Include="images\Gecici\Wella-perfect-SacBoyalari.jpg" />
+    <Content Include="images\Gecici\wella-pure-arindirici-sampuan-250ml-3127-84-O.jpg" />
+    <Content Include="images\Gecici\wella_blonder.jpg" />
+    <Content Include="images\Gecici\Wella_innosense_Sac_Boyalari_60_ml.jpg" />
+    <Content Include="images\Gecici\Wella_perfect_Sac_Boyalari_60_ml.jpg" />
+    <Content Include="images\Gecici\Welloxon-Perfect-Wella-Oksidan-Krem-20-Vol.-6%27lik.jpg" />
+    <Content Include="images\Gecici\Welloxon-Perfect-Wella-Oksidan-Krem-30-Vol.-9%27lik.jpg" />
+    <Content Include="images\Gecici\Welloxon-Perfect-Wella-Oksidan-Krem-40-Vol.-12%27lik.jpg" />
+    <Content Include="images\Gecici\wholsale-10-adet-b&amp;uuml.jpg" />
+    <Content Include="images\Gecici\İndola_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Gecici\İpek Kirpik Seti.jpg" />
+    <Content Include="images\Gecici\İPEKKİRPİKbrşur_on.jpg" />
+    <Content Include="images\home\Alt.jpg" />
+    <Content Include="images\home\Alt1.jpg" />
+    <Content Include="images\home\Alt2.jpg" />
+    <Content Include="images\home\Ana.jpg" />
+    <Content Include="images\home\Bas.png" />
+    <Content Include="images\home\bg_border.png" />
+    <Content Include="images\home\gallery1.jpg" />
+    <Content Include="images\home\gallery2.jpg" />
+    <Content Include="images\home\gallery3.jpg" />
+    <Content Include="images\home\gallery4.jpg" />
+    <Content Include="images\home\girl1.jpg" />
+    <Content Include="images\home\girl2.jpg" />
+    <Content Include="images\home\girl3.jpg" />
+    <Content Include="images\home\iframe1.png" />
+    <Content Include="images\home\iframe2.png" />
+    <Content Include="images\home\iframe3.png" />
+    <Content Include="images\home\iframe4.png" />
+    <Content Include="images\home\logo.png" />
+    <Content Include="images\home\logoo.png" />
+    <Content Include="images\home\logo_1.png" />
+    <Content Include="images\home\logo_old.png" />
+    <Content Include="images\home\map.png" />
+    <Content Include="images\home\new.png" />
+    <Content Include="images\home\partner1.png" />
+    <Content Include="images\home\partner2.png" />
+    <Content Include="images\home\partner3.png" />
+    <Content Include="images\home\partner4.png" />
+    <Content Include="images\home\pricing.png" />
+    <Content Include="images\home\product1.jpg" />
+    <Content Include="images\home\product2.jpg" />
+    <Content Include="images\home\product3.jpg" />
+    <Content Include="images\home\product4.jpg" />
+    <Content Include="images\home\product5.jpg" />
+    <Content Include="images\home\product6.jpg" />
+    <Content Include="images\home\recommend1.jpg" />
+    <Content Include="images\home\recommend2.jpg" />
+    <Content Include="images\home\recommend3.jpg" />
+    <Content Include="images\home\rt-logo-1.jpg" />
+    <Content Include="images\home\sale.png" />
+    <Content Include="images\home\searchicon.png" />
+    <Content Include="images\home\serit.png" />
+    <Content Include="images\home\shipping.jpg" />
+    <Content Include="images\Markalar\marka1.png" />
+    <Content Include="images\product-details\1.jpg" />
+    <Content Include="images\product-details\icons8-alarm-32.png" />
+    <Content Include="images\product-details\icons8-heart-32.png" />
+    <Content Include="images\product-details\new.jpg" />
+    <Content Include="images\product-details\rating.png" />
+    <Content Include="images\product-details\share.png" />
+    <Content Include="images\product-details\similar1.jpg" />
+    <Content Include="images\product-details\similar2.jpg" />
+    <Content Include="images\product-details\similar3.jpg" />
+    <Content Include="images\product-details\teslimat.png" />
+    <Content Include="images\shop\advertisement.jpg" />
+    <Content Include="images\shop\product10.jpg" />
+    <Content Include="images\shop\product11.jpg" />
+    <Content Include="images\shop\product12.jpg" />
+    <Content Include="images\shop\product7.jpg" />
+    <Content Include="images\shop\product8.jpg" />
+    <Content Include="images\shop\product9.jpg" />
+    <Content Include="images\Urunler\Davines-sac-kremi-1000.jpg" />
+    <Content Include="images\Urunler\igora_10.0_boya.jpg" />
+    <Content Include="images\Urunler\igora_9.0_boya.jpg" />
+    <Content Include="images\Urunler\igora_silver_boya.jpg" />
+    <Content Include="images\Urunler\img_chicago.png" />
+    <Content Include="images\Urunler\img_la.png" />
+    <Content Include="images\Urunler\inoa_4.0_boya.jpg" />
+    <Content Include="images\Urunler\inoa_6.0_boya.jpg" />
+    <Content Include="images\Urunler\Loreal_Seriexpert_Absolut500ml.jpg" />
+    <Content Include="images\Urunler\Loreal_Seriexpert_CurlContour500ml.jpg" />
+    <Content Include="images\Urunler\Loreal_Seriexpert_Silver500ml.jpg" />
+    <Content Include="images\Urunler\Loreal_Seriexpert_VitaminColor500ml.jpg" />
+    <Content Include="images\Urunler\Vital_boya_10.0.jpg" />
+    <Content Include="images\Urunler\Vital_boya_8.77.jpg" />
+    <Content Include="images\Urunler_min\-wella-professionals-blondor-soft-blonde-cream.jpg" />
+    <Content Include="images\Urunler_min\08052015182605.jpeg" />
+    <Content Include="images\Urunler_min\1.png" />
+    <Content Include="images\Urunler_min\16LISET.jpg" />
+    <Content Include="images\Urunler_min\200MLGELSET.jpg" />
+    <Content Include="images\Urunler_min\23581854059792976154.jpg" />
+    <Content Include="images\Urunler_min\57373217263574863524.jpg" />
+    <Content Include="images\Urunler_min\6_3fd0e572.jpg" />
+    <Content Include="images\Urunler_min\8680097040015.jpg" />
+    <Content Include="images\Urunler_min\Alix_bitli_özlü_saç_boyası_130_ml.jpg" />
+    <Content Include="images\Urunler_min\alix_boya.png" />
+    <Content Include="images\Urunler_min\Alix_saç_boyası_130_ml.jpg" />
+    <Content Include="images\Urunler_min\Alix_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Urunler_min\Alix_tüp_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Urunler_min\Ağda Bezi.jpg" />
+    <Content Include="images\Urunler_min\beybi-muayene-eld-pudrasz-small-100lu-0-zoom.jpg" />
+    <Content Include="images\Urunler_min\big_urun_852_576.jpg" />
+    <Content Include="images\Urunler_min\BYB-0002_Beybi-Lateks-Muayene-Eldiveni-100%27lu_Medium-500x554.JPG" />
+    <Content Include="images\Urunler_min\dovme.jpg" />
+    <Content Include="images\Urunler_min\dsc01664.jpg" />
+    <Content Include="images\Urunler_min\HC-00P_1.jpg" />
+    <Content Include="images\Urunler_min\igora_boya.png" />
+    <Content Include="images\Urunler_min\igora_oksidan.gif.jpg" />
+    <Content Include="images\Urunler_min\Lilafix_saç_boyası_60_ml.png" />
+    <Content Include="images\Urunler_min\LOREAL Infinie Platine Pro-Keratine Güçlendirici Besleyici Güçlü Toz Saç Açıcı 500gr.jpg" />
+    <Content Include="images\Urunler_min\LOREAL INOA Krem Oksidan 1000ml.jpg" />
+    <Content Include="images\Urunler_min\Loreal Majirel Saç Boyaları.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Absolut Repair Lipidium Aşırı Yıpranmış Saçlar İçin Onarıcı Maske 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Absolut Repair Lipidium Aşırı Yıpranmış Saçlar İçin Onarıcı Mini Maske 75ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Absolut Repair Lipidium Aşırı Yıpranmış Saçlar İçin Onarıcı Şampuan 750ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Absolut Repair Lipidium Maske 200ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Absolut Repair Lipidium Onarıcı Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Absolut Repair Lipidium Onarıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Aminexil Advanced Saç Dökülmesine Karşı Roll On Serum 42x6ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Aminexil Advanced Saç Dökülmesine Karşı Serum 10x6ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Aminexil Dökülme Önleyici Set.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Curl Contour Dalgalı Saçlar İçin Bukle Belirginleştirici Maske 200ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Curl Contour Dalgalı Saçlar İçin Bukle Belirginleştirici Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Delicate Color Boyalı Saçlar İçin Renk Koruyucu Sülfatsız Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Density Advanced Saç Dökülmesi Karşıtı Yoğunlaştırıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Instant Clear Pure Yağlı Saçlar İçin Kepek Önleyici Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Maske 200ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Maske 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Intense Repair Kuru Saçlar İçin Nemlendirici ve Besleyici Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Liss Unlimited Asi Saçlar İçin Düzleştirici Maske 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Liss Unlimited Asi Saçlar İçin Düzleştirici Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Liss Unlimited Asi Saçlar İçin Düzleştirici Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Maske 200ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Maske 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Lumino Contrast Röfleli Saçlar İçin Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Power Kera-Recharge Yıpranmış Saçlar İçin Yoğun Bakım Serumu 30x10ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Power Repair Lipidium Yıpranmış Saçlar İçin Onarıcı Serum 30x10ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Powerdose Color Boyalı Saçlar İçin Renk Koruyucu Parlaklık Serumu 30x10ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Maske 200ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Maske 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert PRO KERATIN REFILL Yıpranmış Zayıf Saçlar İçin Onarıcı Güçlendirici Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Pure Resource Yağlı Saçlar İçin Arındırıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Sensi Balance Hassas Baş Derisi İçin Yatıştırıcı Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Shine Blonde Sarı Saçlar İçin Turuncu Önleyici Parlaklık Şampuanı 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Silver Gri ve Beyaz Saçlar İçin Parlaklık Veren Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Silver Gri ve Beyaz Saçlar İçin Parlaklık Veren Şampuan 750ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Vitamino Color AOX Boyalı Saçlar İçin Renk Koruyucu Mini Jel Maske 75ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Jel Maske 200ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Jel Maske 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Şampuan 1500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Vitamino Color Boyalı Saçlar İçin Renk Koruyucu Şampuan 750ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Vitamino Delicate Color Boyalı Saçlar İçin Renk Koruyucu Sülfatsız Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Volumetry Volumceutic İnce Telli Saçlar İçin Hacimlendirici Maske 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Volumetry İnce Telli Saçlar İçin Hacimlendirici Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\LOREAL Serie Expert Volumetry İnce Telli Saçlar İçin Hacimlendirici Şampuan 750ml.jpg" />
+    <Content Include="images\Urunler_min\Loreal İnoa Oksidan Krem 10 - 20 - 30 Vol. - İnoa Zenginleştirilmiş Oksidan 1000ml.jpg" />
+    <Content Include="images\Urunler_min\Loreal İnoa Oksidan Krem 10 - 20 - 30 Vol. - İnoa Zenginleştirilmiş Oksidan 1000ml2.jpg" />
+    <Content Include="images\Urunler_min\Loreal İnoa Saç Boyaları.jpg" />
+    <Content Include="images\Urunler_min\Loreal İnoa Supreme Saç Boyaları.jpg" />
+    <Content Include="images\Urunler_min\loreal-inoa-post-sampuan-1500ml-650x650.jpg" />
+    <Content Include="images\Urunler_min\loreal-inoa-post-sampuan-1500ml.jpg" />
+    <Content Include="images\Urunler_min\loreal-inoa-post-sampuan-1500_ml.jpg" />
+    <Content Include="images\Urunler_min\loreal-serie-expert-liss-unlimited-duzlestirici-maske-200ml-650x650.jpg" />
+    <Content Include="images\Urunler_min\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM.jpg" />
+    <Content Include="images\Urunler_min\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM_%253_%256_%259_%2512.jpg" />
+    <Content Include="images\Urunler_min\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM_%253_%256_%259_%2512_YÜZDE_ÜÇ_ALTI_DOKUZ_ONİKİ_BİN_ML_BİR_LİTRE.jpg" />
+    <Content Include="images\Urunler_min\LOREAL_INOA_Krem_Oksidan_1000ml_10_20_30_VOLUM_%253_%256_%259_%2512_YÜZDE_ÜÇ_ALTI_DOKUZ_ONİKİ_BİN_ML_BİR_LİTRE_1_LT.jpg" />
+    <Content Include="images\Urunler_min\LOREAL_INOA_Krem_Oksidan_Peroksit_1000ml_10_20_30_VOLUM.jpg" />
+    <Content Include="images\Urunler_min\LOREAL_INOA_Krem_Oksidan_Peroksit_1000_ml_10_20_30_VOLUM.jpg" />
+    <Content Include="images\Urunler_min\Loreal_inoa_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Urunler_min\Loreal_Majirel_Sac_Boyalari_60_ml.jpg" />
+    <Content Include="images\Urunler_min\loreal_professionnel_inoa_krem_oksidan_37305_1.jpg" />
+    <Content Include="images\Urunler_min\Martix_saç_boyası_60_ml.png" />
+    <Content Include="images\Urunler_min\Matrix Socolor Beauty Saç Boyası Doğal Renk Koleksiyonu.jpg" />
+    <Content Include="images\Urunler_min\Morfose Argan Fön Suyu 400 ml Turuncu.jpg" />
+    <Content Include="images\Urunler_min\Morfose Argan Krem Maske 170ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Argan Saf Yağ 15ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Argan Yağı 100ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Argan Şampuan 500ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Argan Şekillendirici Elixir 100ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Balyaj Boyası 250ml.png" />
+    <Content Include="images\Urunler_min\Morfose Biotin Fön Suyu 400 ml Yeşil.jpg" />
+    <Content Include="images\Urunler_min\Morfose Biryantin 175ml.png" />
+    <Content Include="images\Urunler_min\MORFOSE BODY SCRUB-500x500 %282%29.jpg" />
+    <Content Include="images\Urunler_min\MORFOSE BODY SCRUB-500x500 %283%29.jpg" />
+    <Content Include="images\Urunler_min\MORFOSE BODY SCRUB-500x500 %284%29.jpg" />
+    <Content Include="images\Urunler_min\MORFOSE BODY SCRUB-500x500 %285%29.jpg" />
+    <Content Include="images\Urunler_min\MORFOSE BODY SCRUB-500x500 %286%29.jpg" />
+    <Content Include="images\Urunler_min\Morfose Keratin Fön Suyu 400 ml Mor.jpg" />
+    <Content Include="images\Urunler_min\Morfose Keratin Maske 500 ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Keratin Serum 75ml Siyah.png" />
+    <Content Include="images\Urunler_min\Morfose Kremsi Saç Bakım Köpüğü 200 ml.png" />
+    <Content Include="images\Urunler_min\Morfose Kremsi Süt Şampuan 400 ml.png" />
+    <Content Include="images\Urunler_min\Morfose Macadamia Krem Maske 500 ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Milk Keratin Serum 125 ml.png" />
+    <Content Include="images\Urunler_min\Morfose Milk Therapy Chocolate 200 ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Natura Therapy Macadamia Bakım Yağı 125 ml.jpg" />
+    <Content Include="images\Urunler_min\Morfose Natura Therapy Macadamia Şampuan.jpg" />
+    <Content Include="images\Urunler_min\Morfose Natura Therapy Saf Macadamia Yağı.jpg" />
+    <Content Include="images\Urunler_min\Morfose Renkli Işıltılı Saç Spreyi Glitter Spray 125ml.png" />
+    <Content Include="images\Urunler_min\Morfose Saç bakım maskesi 500ml Ballı.png" />
+    <Content Include="images\Urunler_min\Morfose Saç bakım maskesi 500ml Boya Koruma.png" />
+    <Content Include="images\Urunler_min\Morfose Saç masaj toniği 250ml.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Maskesi 250 ml.png" />
+    <Content Include="images\Urunler_min\Morfose Saç serumu 100ml.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi 350 ml Normal Strong Beyaz.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi 350ml Normal Strong Beyaz.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi 350_ml Normal Strong Beyaz.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi 400 ml Extra Strong Siyah.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi 400ml Mega Strong Mor.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi 400ml NOGAS Ultra Strong Turuncu.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi 400ml Ultra Strong Turuncu.jpg" />
+    <Content Include="images\Urunler_min\Morfose Saç Spreyi Normal Strong Beyaz.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Waxı 120g Clay Mat.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Waxı 120g Extra Strong Siyah.png" />
+    <Content Include="images\Urunler_min\Morfose Saç Waxı 120g Ultra Strong Turuncu.png" />
+    <Content Include="images\Urunler_min\Morfose Silk Serum 75 ml Beyaz.png" />
+    <Content Include="images\Urunler_min\Morfose Toz Açıcı 1000 g.png" />
+    <Content Include="images\Urunler_min\Morfose Çift Fazla Fön Sütü 400 ml.png" />
+    <Content Include="images\Urunler_min\Morfose Çift Fazla Fön Sütü 400ml.png" />
+    <Content Include="images\Urunler_min\Morfose-Hair-Serum.jpg" />
+    <Content Include="images\Urunler_min\Morfose-Keratin-Serum.jpg" />
+    <Content Include="images\Urunler_min\MorfoseSaç Spreyi 350ml Normal Strong Beyaz.png" />
+    <Content Include="images\Urunler_min\Onarıcı Saç serumu 75 ml Turuncu.png" />
+    <Content Include="images\Urunler_min\Onarıcı Saç serumu 75ml Turuncu.png" />
+    <Content Include="images\Urunler_min\Organik_bitkisal_saç_boyası_150_ml.jpg" />
+    <Content Include="images\Urunler_min\Percem-Sac-Kopugu-500-ml--43751.jpg" />
+    <Content Include="images\Urunler_min\percem-styling-sac-kopugu-super-kalici-bukleler-697-75-B.jpg" />
+    <Content Include="images\Urunler_min\PERÇEM EL KREMİ E VİTAMİNLİ 250 ml.jpg" />
+    <Content Include="images\Urunler_min\PERÇEM LİMON AROMALI 80 DERECE KOLONYA 5lt.jpg" />
+    <Content Include="images\Urunler_min\PERÇEM VAZELİN 110 ml.jpg" />
+    <Content Include="images\Urunler_min\Perçem_limon_kolonyası_bir_litre_1lt.jpg" />
+    <Content Include="images\Urunler_min\Perçem_limon_kolonyası_bir_litre_1_lt.jpg" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %282%29.png" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %283%29.png" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %284%29.png" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_%253_%256_%259_%2512_yüzde_üç_altı_dokuz_oniki %285%29.png" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %282%29.png" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %283%29.png" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %284%29.png" />
+    <Content Include="images\Urunler_min\Perçem_oksidan_peroksit_krem_bir_litre_1_lt_10_20_30_40_volum_yüzde_üç_altı_dokuz_oniki %285%29.png" />
+    <Content Include="images\Urunler_min\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %282%29.png" />
+    <Content Include="images\Urunler_min\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %283%29.png" />
+    <Content Include="images\Urunler_min\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %284%29.png" />
+    <Content Include="images\Urunler_min\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %285%29.png" />
+    <Content Include="images\Urunler_min\Perçem_şampuan_saç_kremi_pembe_yeşil_beş_5_litre_lt %286%29.png" />
+    <Content Include="images\Urunler_min\pr_01_1248_max.jpg" />
+    <Content Include="images\Urunler_min\pr_01_20_max.jpg" />
+    <Content Include="images\Urunler_min\pr_01_455_max.jpg" />
+    <Content Include="images\Urunler_min\pr_01_476_max.jpg" />
+    <Content Include="images\Urunler_min\Raliss.png" />
+    <Content Include="images\Urunler_min\Redist Keratin Argan Şampuan 500 Ml.jpg" />
+    <Content Include="images\Urunler_min\redist-2-fazlı-saç-kondisyoneri-argan-yağı-içerikli-400ml-redist-urunleri-redist-a--2732-320x300.jpg" />
+    <Content Include="images\Urunler_min\redist-hair-care-mousse-saç-köpuğu-40-çeşit-200gr-saç-bakım-urunleri-redist-alk114--2760-320x300.jpg" />
+    <Content Include="images\Urunler_min\redist-hair-care-oil-saç-bakım-yağı-150ml-saç-bakım-urunleri-redist-alk103--2761-320x300.jpg" />
+    <Content Include="images\Urunler_min\redist-hair-care-saç-bakım-kremi-500ml-şampuanlar-redist-alk108--2828-320x300.jpg" />
+    <Content Include="images\Urunler_min\redist-hair-care-shampoo-saç-bakım-şampuanı-40-çeşit-500ml-şampuanlar-redist-alk10--2827-320x300.jpg" />
+    <Content Include="images\Urunler_min\redist-hair-serum-saç-serumu-organik-argan-yağıkomple-bakım-100ml-saç-bakım-urunl-49-320x300.jpg" />
+    <Content Include="images\Urunler_min\redist-miracle-hair-care-oil-plus-keratin-yağı-100ml-saç-bakım-urunleri-redist-alk10--2842-320x300.jpg" />
+    <Content Include="images\Urunler_min\redist-saç-serumu-maximum-bakım-saç-bakım-urunleri-redist-alk105-1-2-48-320x300.jpg" />
+    <Content Include="images\Urunler_min\Saç bakım maskesi 500ml Onarıcı.png" />
+    <Content Include="images\Urunler_min\Schwarzkopf-profesyonel-igora-saç-boyası-renkleri1.jpg" />
+    <Content Include="images\Urunler_min\Schwarzkopf_profesyonel_absolutes_igora_saç_boyası_renkleri_60_ml.jpg" />
+    <Content Include="images\Urunler_min\Tek Kullanımlık 100%27lü Havlu.jpeg" />
+    <Content Include="images\Urunler_min\Tek Kullanımlık Terlik.jpg" />
+    <Content Include="images\Urunler_min\thumba___oje_5.jpg" />
+    <Content Include="images\Urunler_min\u7_3.jpg" />
+    <Content Include="images\Urunler_min\vitalboya-500x500.jpg" />
+    <Content Include="images\Urunler_min\vital_boya.png" />
+    <Content Include="images\Urunler_min\Wella Clean Kepek Önleyici Şampuan 250ml.jpg" />
+    <Content Include="images\Urunler_min\Wella Enrich Moisturizing Şampuan  Kalın Telli Saçlar İçin Şampuan 1000 ml.jpg" />
+    <Content Include="images\Urunler_min\Wella Enrich Moisturizing Şampuan  İnce Telli Saçlar İçin Şampuan 1000 ml.jpg" />
+    <Content Include="images\Urunler_min\Wella Enrich İnce Telli Normal Saçlar İçin Hacimlendirici Şampuan 250ml.jpg" />
+    <Content Include="images\Urunler_min\Wella Enrich İnce TelliNormal Saçlar İçin Hacimlendirici Şampuan 250ml.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals Brillance Kalın Telli Boyalı Saçlar İçin Şampuan 1 lt.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals Brillance İnce Telli Boyalı Saçlar İçin Şampuan 1 lt.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals Enrich Conditioner 1 lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals Enrich Conditioner 1lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals Enrich Conditioner 1lt İnce Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals EnrichConditioner 1lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals EnrichConditioner 1lt Kalın Telli Saçlar İçinSaç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella Professionals EnrichConditioner 1lt İnce Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella ProfessionalsEnrich Conditioner 1 lt Kalın Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella ProfessionalsEnrich Conditioner 1 lt İnce Telli Saçlar İçin Saç Kremi.jpg" />
+    <Content Include="images\Urunler_min\Wella Refresh Canlandirici Şampuan 250ml.jpg" />
+    <Content Include="images\Urunler_min\Wella Refresh Canlandirici Şampuan250ml.jpg" />
+    <Content Include="images\Urunler_min\wella-balance-dokulmeye-karsi-serum-8x6ml-3124-84-O.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-ince-telli-boyali-saclar-icin-bakim-kremi-200ml-922-84-O.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-ince-telli-boyali-saclar-icin-maske-500ml-924-85-O.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-ince-tellinormal-boyali-saclar-icin-maske-150ml-926-85-O.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-ince-tellinormal-boyali-saclar-icin-maske-150ml-926-85.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-ince-tellinormal-boyali-saclar-icin-sampuan-250ml-5421-85-B.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-kalin-telli-boyali-saclar-icin-bakim-kremi-200ml-922-84-O.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-kalin-telli-boyali-saclar-icin-maske-500ml-924-85-O.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-kalın-tellinormal-boyali-saclar-icin-maske-150ml-926-85 - Kopya.jpg" />
+    <Content Include="images\Urunler_min\wella-brillance-kalın-tellinormal-boyali-saclar-icin-sampuan-250ml-5421-85-B.jpg" />
+    <Content Include="images\Urunler_min\wella-calm-hassas-sac-derisi-icin-sampuan-250ml-5420-84-O.jpg" />
+    <Content Include="images\Urunler_min\wella-clean-kepek-onleyici-sampuan-250ml-1654-84-O.jpg" />
+    <Content Include="images\Urunler_min\wella-curl-it-mild-perma-losyonu-75ml-wella-perma-urunleri-4798-28-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-elixir-kirik-uc-bakim-onarim-yagi-40ml-932-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-ince-telli-normal-saclar-icin-hacimlendirici-sampuan-250ml.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-ince-telli-saclar-icin-nemlendirici-bakim-kremi-200ml-936-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-ince-telli-saclar-icin-nemlendirici-bakim-maskesi-150ml-931-85-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-ince-telli-saclar-icin-nemlendirici-bakim-maskesi-500ml-934-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-ince-telli-saclar-icin-nemlendirici-sampuan-250ml-933-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-ince-tellinormal-saclar-icin-hacimlendirici-sampuan-250ml-935-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-kalin-telli-saclar-icin-nemlendirici-bakim-kremi-200ml-936-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-kalin-telli-saclar-icin-nemlendirici-bakim-maskesi-150ml-931-85-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-kalin-telli-saclar-icin-nemlendirici-bakim-maskesi-500ml-934-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-kalin-telli-saclar-icin-nemlendirici-sampuan-250ml-933-86-O.jpg" />
+    <Content Include="images\Urunler_min\wella-enrich-kalın-telli-normal-saclar-icin-hacimlendirici-sampuan-250ml.jpg" />
+    <Content Include="images\Urunler_min\wella-oil-reflections-bakim-yagi-100ml-944-87-O.jpg" />
+    <Content Include="images\Urunler_min\Wella-perfect-SacBoyalari.jpg" />
+    <Content Include="images\Urunler_min\wella-pure-arindirici-sampuan-250ml-3127-84-O.jpg" />
+    <Content Include="images\Urunler_min\wella_blonder.jpg" />
+    <Content Include="images\Urunler_min\Wella_innosense_Sac_Boyalari_60_ml.jpg" />
+    <Content Include="images\Urunler_min\Wella_perfect_Sac_Boyalari_60_ml.jpg" />
+    <Content Include="images\Urunler_min\Welloxon-Perfect-Wella-Oksidan-Krem-20-Vol.-6%27lik.jpg" />
+    <Content Include="images\Urunler_min\Welloxon-Perfect-Wella-Oksidan-Krem-30-Vol.-9%27lik.jpg" />
+    <Content Include="images\Urunler_min\Welloxon-Perfect-Wella-Oksidan-Krem-40-Vol.-12%27lik.jpg" />
+    <Content Include="images\Urunler_min\wholsale-10-adet-b&amp;uuml.jpg" />
+    <Content Include="images\Urunler_min\İndola_saç_boyası_60_ml.jpg" />
+    <Content Include="images\Urunler_min\İpek Kirpik Seti.jpg" />
+    <Content Include="images\Urunler_min\İPEKKİRPİKbrşur_on.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="js\ajaxupdate3.6.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\gmaps.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\hummingbird-treeview.js" />
+    <Content Include="js\jquery.bootpag.js" />
+    <Content Include="js\jquery.bootpag.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\jquery.scrollUp.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\price-range.js" />
+    <Content Include="js\toastr.js" />
+    <Content Include="js_custom\AdminPaneli.js" />
+    <Content Include="js_custom\AdminPanelKategoriler.js" />
+    <Content Include="js_custom\AdminPanelMusteriler.js" />
+    <Content Include="js_custom\AdminPanelSiparisler.js" />
+    <Content Include="js_custom\AdminPanelUrunler.js" />
+    <Content Include="js_custom\detay.js" />
+    <Content Include="js_custom\Hesabim.js" />
+    <Content Include="js_custom\HesabimAdres.js" />
+    <Content Include="js_custom\HesabimSifre.js" />
+    <Content Include="js_custom\HesabimSiparis.js" />
+    <Content Include="js_custom\hizlisepet.js" />
+    <Content Include="js_custom\index.js" />
+    <Content Include="js_custom\login.js" />
+    <Content Include="js_custom\main.js" />
+    <Content Include="js_custom\sepetim.js" />
+    <Content Include="js_custom\sessionKntrol.js" />
+    <Content Include="js_custom\test.js" />
+    <Content Include="js_custom\Urunler.js" />
+    <Content Include="js_custom\UserLogin.js" />
+    <Content Include="login.aspx" />
+    <Content Include="popup\adminLogin.ascx" />
+    <Content Include="popup\userLogin.ascx" />
+    <Content Include="sample_web_site\about.html" />
+    <Content Include="sample_web_site\checkout.html" />
+    <Content Include="sample_web_site\codes.html" />
+    <Content Include="sample_web_site\contact.html" />
+    <Content Include="sample_web_site\css\animate.min.css" />
+    <Content Include="sample_web_site\css\bootstrap.css" />
+    <Content Include="sample_web_site\css\flexslider.css" />
+    <Content Include="sample_web_site\css\flexslider1.css" />
+    <Content Include="sample_web_site\css\jquery-ui.css" />
+    <Content Include="sample_web_site\css\style.css" />
+    <Content Include="sample_web_site\faq.html" />
+    <Content Include="sample_web_site\images\1.jpg" />
+    <Content Include="sample_web_site\images\b1.png" />
+    <Content Include="sample_web_site\images\b2.png" />
+    <Content Include="sample_web_site\images\b3.png" />
+    <Content Include="sample_web_site\images\g1.jpg" />
+    <Content Include="sample_web_site\images\g10.jpg" />
+    <Content Include="sample_web_site\images\g11.jpg" />
+    <Content Include="sample_web_site\images\g12.jpg" />
+    <Content Include="sample_web_site\images\g2.jpg" />
+    <Content Include="sample_web_site\images\g3.jpg" />
+    <Content Include="sample_web_site\images\g4.jpg" />
+    <Content Include="sample_web_site\images\g5.jpg" />
+    <Content Include="sample_web_site\images\g6.jpg" />
+    <Content Include="sample_web_site\images\g7.jpg" />
+    <Content Include="sample_web_site\images\g8.jpg" />
+    <Content Include="sample_web_site\images\g9.jpg" />
+    <Content Include="sample_web_site\images\img1.jpg" />
+    <Content Include="sample_web_site\images\img2.jpg" />
+    <Content Include="sample_web_site\images\img3.jpg" />
+    <Content Include="sample_web_site\images\into.png" />
+    <Content Include="sample_web_site\images\move-up.png" />
+    <Content Include="sample_web_site\images\s1.jpg" />
+    <Content Include="sample_web_site\images\s2.jpg" />
+    <Content Include="sample_web_site\images\s3.jpg" />
+    <Content Include="sample_web_site\images\social-icons.png" />
+    <Content Include="sample_web_site\images\star.png" />
+    <Content Include="sample_web_site\images\star1.png" />
+    <Content Include="sample_web_site\images\t1.png" />
+    <Content Include="sample_web_site\images\t2.png" />
+    <Content Include="sample_web_site\images\t3.png" />
+    <Content Include="sample_web_site\images\t4.png" />
+    <Content Include="sample_web_site\images\tick.png" />
+    <Content Include="sample_web_site\index.html" />
+    <Content Include="sample_web_site\js\bootstrap.js" />
+    <Content Include="sample_web_site\js\easing.js" />
+    <Content Include="sample_web_site\js\imagezoom.js" />
+    <Content Include="sample_web_site\js\jquery-1.11.1.min.js" />
+    <Content Include="sample_web_site\js\jquery-ui.js" />
+    <Content Include="sample_web_site\js\jquery.countdown.min.js" />
+    <Content Include="sample_web_site\js\jquery.flexslider.js" />
+    <Content Include="sample_web_site\js\jquery.jscrollpane.min.js" />
+    <Content Include="sample_web_site\js\jquery.mousewheel.js" />
+    <Content Include="sample_web_site\js\main.js" />
+    <Content Include="sample_web_site\js\modernizr.custom.js" />
+    <Content Include="sample_web_site\js\move-top.js" />
+    <Content Include="sample_web_site\js\simpleCart.min.js" />
+    <Content Include="sample_web_site\js\uisearch.js" />
+    <Content Include="sample_web_site\js\wow.min.js" />
+    <Content Include="sample_web_site\products.html" />
+    <Content Include="sample_web_site\register.html" />
+    <Content Include="sample_web_site\signin.html" />
+    <Content Include="sample_web_site\single.html" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="sepetim.aspx" />
+    <Content Include="Urunler.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel.Master.cs">
+      <DependentUpon>AdminPanel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Master.designer.cs">
+      <DependentUpon>AdminPanel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli.aspx.cs">
+      <DependentUpon>AdminPaneli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli.aspx.designer.cs">
+      <DependentUpon>AdminPaneli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelKategoriler.aspx.cs">
+      <DependentUpon>AdminPanelKategoriler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanelKategoriler.aspx.designer.cs">
+      <DependentUpon>AdminPanelKategoriler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelMusteriler.aspx.cs">
+      <DependentUpon>AdminPanelMusteriler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanelMusteriler.aspx.designer.cs">
+      <DependentUpon>AdminPanelMusteriler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelSiparisler.aspx.cs">
+      <DependentUpon>AdminPanelSiparisler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanelSiparisler.aspx.designer.cs">
+      <DependentUpon>AdminPanelSiparisler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelUrunler.aspx.cs">
+      <DependentUpon>AdminPanelUrunler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanelUrunler.aspx.designer.cs">
+      <DependentUpon>AdminPanelUrunler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detay.aspx.cs">
+      <DependentUpon>detay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detay.aspx.designer.cs">
+      <DependentUpon>detay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hesabim.aspx.cs">
+      <DependentUpon>Hesabim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hesabim.aspx.designer.cs">
+      <DependentUpon>Hesabim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HesabimAdres.aspx.cs">
+      <DependentUpon>HesabimAdres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HesabimAdres.aspx.designer.cs">
+      <DependentUpon>HesabimAdres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HesabimSifre.aspx.cs">
+      <DependentUpon>HesabimSifre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HesabimSifre.aspx.designer.cs">
+      <DependentUpon>HesabimSifre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HesabimSiparis.aspx.cs">
+      <DependentUpon>HesabimSiparis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HesabimSiparis.aspx.designer.cs">
+      <DependentUpon>HesabimSiparis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hizlisepet.aspx.cs">
+      <DependentUpon>hizlisepet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hizlisepet.aspx.designer.cs">
+      <DependentUpon>hizlisepet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="popup\adminLogin.ascx.cs">
+      <DependentUpon>adminLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="popup\adminLogin.ascx.designer.cs">
+      <DependentUpon>adminLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="popup\userLogin.ascx.cs">
+      <DependentUpon>userLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="popup\userLogin.ascx.designer.cs">
+      <DependentUpon>userLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sepetim.aspx.cs">
+      <DependentUpon>sepetim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sepetim.aspx.designer.cs">
+      <DependentUpon>sepetim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler.aspx.cs">
+      <DependentUpon>Urunler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Urunler.aspx.designer.cs">
+      <DependentUpon>Urunler.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="template e ticaret\css\" />
+    <Folder Include="template e ticaret\fonts\" />
+    <Folder Include="template e ticaret\images\" />
+    <Folder Include="template e ticaret\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KUMSALKOZMETIK.DATA\KUMSALKOZMETIK.DATA.csproj">
+      <Project>{3af5f5fa-acc7-4a2c-8edd-2a19263b6643}</Project>
+      <Name>KUMSALKOZMETIK.DATA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52879</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52578/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

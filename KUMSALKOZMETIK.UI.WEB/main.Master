@@ -1,0 +1,242 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="KUMSALKOZMETIK.UI.WEB.main" %>
+
+<%@ Register Src="~/popup/adminLogin.ascx" TagPrefix="uc1" TagName="adminLogin" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/prettyPhoto.css" rel="stylesheet" />
+    <link href="css/price-range.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/toastr.css" rel="stylesheet" />
+
+    <link href="sample_web_site/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="sample_web_site/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+
+    <asp:ContentPlaceHolder ID="main_head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <div class="header">
+
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i>+90 507 301 92 12</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>kumsalkozmetik@hotmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="logo pull-left">
+                            <a href="index.aspx">
+                                <img src="images/home/logo.png" alt="" style="width: 200px; height: 60px" /></a>
+                        </div> 
+                    </div>
+
+                    <div class="col-sm-5" style="margin-top: 25px">
+
+                        <div id="box" style="padding-left:60px">
+                            <input  type="text" id="search" placeholder="Ara..">
+                            <i style="padding-left:60px" class="fa fa-search"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-sm-4" style="margin-top: -20px">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+
+                                <li style="margin-bottom: 8px">
+                                    <div class="header-right cart">
+                                        <div class="nav navbar-nav wow fadeInLeft animated" data-wow-delay=".5s" mylogin="">
+                                            <a href="login.aspx"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Giriş Yap</a>
+
+                                        </div>
+
+                                        <div class="nav navbar-nav wow fadeInLeft animated" data-wow-delay=".5s" my_kullanici="">
+                                            <span class="glyphicon glyphicon-user" aria-hidden="true" style="float: left; margin-bottom: 7px"></span>
+
+                                            <p style="float: left; padding-top: 5px" my_kullanici_text=""></p>
+                                            <p style="float: left; padding-top: 5px"><a href="Hesabim.aspx">(BİLGİLERİM)</a></p>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="header-right cart">
+                                        <a href="sepetim.aspx"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                                        <h4>
+                                            <a href="sepetim.aspx">
+                                                <span class="simpleCart_total">0.00 TL</span>&nbsp(<span id="simpleCart_quantity" class="simpleCart_quantity">0</span>)
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header-middle-->
+
+
+
+
+
+        <div class="top-nav navbar navbar-default">
+            <!--header-three-->
+            <div class="container">
+                <nav class="navbar" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!--navbar-header-->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <!--//navbar-collapse-->
+                    </div>
+                    <!--//navbar-header-->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div style="min-height: 430px">
+
+        <asp:ContentPlaceHolder ID="main_body" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <footer id="footer" style="margin-top: 15px">
+        <!--Footer-->
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Kumsal Kozmetik</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Ana Sayfa</a></li>
+                                <li><a href="#">Hızlı Sipariş</a></li>
+                                <li><a href="#">Kampanyalar</a></li>
+                                <li><a href="#">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Yardım</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Canlı Yardım</a></li>
+                                <li><a href="#">Email Desteği</a></li>
+                                <li><a href="#">Sık Sorulan Sorular</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2></h2>
+                            <ul class="nav nav-pills nav-stacked">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2></h2>
+                            <ul class="nav nav-pills nav-stacked">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="single-widget">
+                            <h2>HIZLI İLETİŞİM</h2>
+                            <div action="#" class="searchform">
+                                <p>
+                                    Kampanya ve duyurulardan e-posta veya 
+                                    <br />
+                                    telefon ile haberdar olmak istiyorum.
+                                </p>
+                                <input type="text" placeholder="İsim" />
+                                <br />
+                                <input type="text" placeholder="Telefon Numarası" />
+                                <br />
+                                <button type="button" class="btn btn-default" style="margin-top: 1px; margin-left: 1px;"><i class="fa fa-arrow-circle-o-right"></i></button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2021 Kumsal Kozmetik.</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+     
+    <uc1:adminLogin runat="server" id="adminLogin" />
+     
+    <script src="sample_web_site/js/jquery-1.11.1.min.js"></script>
+    <script src="sample_web_site/js/bootstrap.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/toastr.js"></script>
+    <script src="js/jquery.bootpag.js"></script>
+    <script src="js/jquery.bootpag.min.js"></script>
+    <script src="AdminPanelContent/content/moment/min/moment.min.js"></script>
+    <script src="js_custom/main.js"></script>
+
+    <asp:ContentPlaceHolder ID="main_footer" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+
+</html>
